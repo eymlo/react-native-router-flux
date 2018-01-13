@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react/native';
 import { ViewPropTypes, BackHandler, Linking } from 'react-native';
 import PropTypes from 'prop-types';
-import { addNavigationHelpers } from 'react-navigation';
+import { addNavigationHelpers } from 'react-navigation/lib/react-navigation.js';
 import navigationStore from './navigationStore';
 import pathParser from './pathParser';
 

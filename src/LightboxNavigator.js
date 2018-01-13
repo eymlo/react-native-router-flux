@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from 'react';
-import { addNavigationHelpers, createNavigationContainer, createNavigator, TabRouter } from 'react-navigation';
+import { addNavigationHelpers, createNavigationContainer, createNavigator, TabRouter } from 'react-navigation/lib/react-navigation.js';
 import { View } from 'react-native';
 
 const LightboxNavigator = (

@@ -1,6 +1,6 @@
 import navigationStore from './navigationStore';
 import * as ActionConst from './ActionConst';
-import { NavigationActions } from 'react-navigation';
+import { NavigationActions } from 'react-navigation/lib/react-navigation.js';
 import { getActiveState, popPrevious, isActiveRoute, getActiveStateExceptDrawer } from './State';
 
 export const supportedActions = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderBackButton } from 'react-navigation';
+import { HeaderBackButton } from 'react-navigation/lib/react-navigation.js';
 import {
   Platform,
   I18nManager,
