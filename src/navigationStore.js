@@ -4,7 +4,6 @@ import * as ActionConst from './ActionConst';
 import { OnEnter, OnExit, assert } from './Util';
 import { Image, Animated, Easing, Platform } from 'react-native';
 import { TabNavigator, DrawerNavigator, StackNavigator, NavigationActions, TabBarTop, TabBarBottom } from 'react-navigation/lib/react-navigation.js';
-debugger
 import { LeftButton, RightButton, BackButton } from './NavBar';
 import LightboxNavigator from './LightboxNavigator';
 import _drawerImage from '../images/menu_burger.png';
