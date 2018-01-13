@@ -1,7 +1,7 @@
 Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='src/LightboxNavigator.js';
 
 var _react=require('react');var _react2=_interopRequireDefault(_react);
-var _reactNavigation=require('react-navigation');
+var _reactNavigation=require('react-navigation/lib/react-navigation.js');
 var _reactNative=require('react-native');function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var LightboxNavigator=function LightboxNavigator(

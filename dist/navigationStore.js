@@ -3,7 +3,7 @@ var _mobx=require('mobx');
 var _ActionConst=require('./ActionConst');var ActionConst=_interopRequireWildcard(_ActionConst);
 var _Util=require('./Util');
 var _reactNative=require('react-native');
-var _reactNavigation=require('react-navigation');
+var _reactNavigation=require('react-navigation/lib/react-navigation.js');
 var _NavBar=require('./NavBar');
 var _LightboxNavigator=require('./LightboxNavigator');var _LightboxNavigator2=_interopRequireDefault(_LightboxNavigator);
 var _menu_burger=require('../images/menu_burger.png');var _menu_burger2=_interopRequireDefault(_menu_burger);
