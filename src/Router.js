@@ -39,6 +39,8 @@ class App extends React.Component {
 
     // Clean the url with the given prefix.
     const cleanUrl = this.props.uriPrefix ? url.split(this.props.uriPrefix)[1] : url;
+    // Skip for uriPrefix which not registered
+    if (!cleanUrl) { return; }
     // Build an array of paths for every scene.
     const allPaths = Object.values(navigationStore.states).map(obj => obj.path).filter(path => path);
     // Try to match the url against the set of paths and parse the url parameters.
@@ -67,7 +69,7 @@ class App extends React.Component {
   render() {
     const AppNavigator = this.props.navigator;
     return (
-      <AppNavigator navigation={addNavigationHelpers({ dispatch: navigationStore.dispatch, state: navigationStore.state })} />
+      <AppNavigator navigation={addNavigationHelpers({ dispatch: navigationStore.dispatch, state: navigationStore.state, addListener: navigationStore.addListener })} />
     );
   }
 }
@@ -86,7 +88,7 @@ const Router = ({ createReducer, sceneStyle, scenes, uriPrefix, navigator, getSc
     // set external state and dispatch
     navigationStore.setState(state);
     navigationStore.dispatch = dispatch;
-    return <AppNavigator navigation={addNavigationHelpers({ dispatch, state })} uriPrefix={uriPrefix} />;
+    return <AppNavigator navigation={addNavigationHelpers({ dispatch, state, addListener: navigationStore.addListener })} uriPrefix={uriPrefix} />;
   }
   return <App {...props} onDeepLink={onDeepLink} navigator={AppNavigator} uriPrefix={uriPrefix} />;
 };

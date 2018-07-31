@@ -4,7 +4,7 @@
 - [`Router`](#router)
 - [`Scene`](#scene)
 - [`Tabs`](#tabs-tabs-or-scene-tabs)
-- [`Stack`](#stack)
+- [`Stack`](#stack-stack)
 - [`Tabbed Scene`](#tab-scene-child-scene-within-tabs)
 - [`Drawer`](#drawer-drawer-or-scene-drawer)
 - [`Modal`](#modals-modal-or-scene-modal)
@@ -23,7 +23,7 @@
 | `uriPrefix`     | `string` |  | A uri prefix to strip from incoming urls for deep linking. For example, if you wanted to support deep linking from `www.example.com/user/1234/`, then you could pass `example.com` to only match paths against `/user/1234/`. |
 
 ## Scene:
-The basic routing component for this router, all `<Scene>` components require a `key` prop that must be unique. A parent `<Scene>` cannot not have a `component` as a `prop` as it will act as a grouping component for its children.
+The basic routing component for this router, all `<Scene>` components require a `key` prop that must be unique. A parent `<Scene>` must have a `component` as a `prop` as it will act as a grouping component for its children.
 
 | Property | Type | Default | Description |
 |-----------|----------|----------|--------------------------------------------|
@@ -68,12 +68,14 @@ The basic routing component for this router, all `<Scene>` components require a 
 | `renderRightButton` | `React.Component` | | React component to render as the right button |
 | `renderBackButton` | `React.Component` | | React component to render back button |
 | `rightButtonImage`     | `Image` |  | Image to substitute for the right nav bar button |
+| `rightButtonStyle`     | `Style` |  | Style applied to right button image |
 | `rightButtonTextStyle`     | `Style` |  | Style applied to right button text |
 | `success`     | `Function` | | If `on` returns a "truthy" value then `success` is called. |
 | `tabs`     | `boolean` | `false` | load child scenes as [TabNavigator](https://reactnavigation.org/docs/navigators/tab). Other [Tab Navigator  props](https://reactnavigation.org/docs/navigators/tab#TabNavigatorConfig) also apply here. |
 | `title`     | `string` |  | Text to be displayed in the center of the nav bar. |
 | `titleStyle`     | `Style` |  | Style applied to the title |
 | `type`   | `string` | `push` | Optional type of navigation action. You could use `replace` to replace current scene with this scene |
+| `drawerLockMode` | enum('unlocked', 'locked-closed', 'locked-open')  |  | If a child of a drawer, specifies the lock mode of the drawer (https://facebook.github.io/react-native/docs/drawerlayoutandroid.html#drawerlockmode) |
 | all other props     |  |  | Any other props not listed here will be pass on to the specified `Scene`'s `component` |
 
 ## Tabs (`<Tabs>` or `<Scene tabs>`)
@@ -97,6 +99,7 @@ Can use all `props` listed above in `<Scene>` as `<Tabs>` is syntatic sugar for 
 | `animationEnabled`     | `boolean` | `true` | Enable or disable tab swipe animation. |
 | `tabBarOnPress`     | `function` | | Custom tab bar icon press. |
 | `backToInitial`     | `boolean` | `false` | Back to initial screen on focused tab if tab icon was tapped. |
+| `upperCaseLabel`     | `boolean` | `true` | Whether to make label uppercase, default is true. |
 
 ## Stack (`<Stack>`)
 A component to group Scenes together for its own stack based navigation. Using this will create a separate navigator for this stack, so expect two navbars to appear unless you add `hideNavBar`.
@@ -119,7 +122,6 @@ Can use all `prop` as listed in `Scene` as `<Drawer>`, syntatic sugar for `<Scen
 | `hideDrawerButton` | `boolean` | `false` | Boolean to show or not the drawerImage or drawerIcon |
 | `drawerPosition` | `string`  | `left` | Determines whether the drawer is on the right or the left. Keywords accepted are `right` and `left` |
 | `drawerWidth` | `number`  |  | The width, in pixels, of the drawer (optional)|
-| `drawerLockMode` | enum('unlocked', 'locked-closed', 'locked-open')  |  | Specifies the lock mode of the drawer (https://facebook.github.io/react-native/docs/drawerlayoutandroid.html#drawerlockmode) |
 
 
 ## Modals (`<Modal>` or `<Scene modal>`)

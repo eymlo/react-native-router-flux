@@ -26,7 +26,7 @@ export var Scene: SceneStatic;
 export type Scene = SceneStatic;
 interface SceneProps extends React.Props<Scene> {
     key: string;
-    component: React.ComponentType<any>
+    component?: React.ComponentType<any>
     back?: boolean;
     init?: boolean;
     clone?: boolean;
@@ -69,7 +69,7 @@ interface TabSceneProps extends React.Props<Scene> {
     tabBarLabel?: string;
 }
 interface SceneStatic extends React.ComponentClass<SceneProps & TabsProps & TabSceneProps & DrawerProps & ModalProps> { }
-export type HeaderModeType = "float" | "screen";
+export type HeaderModeType = "float" | "screen" | "none";
 
 // Tabs
 export var Tabs: TabsStatic;
