@@ -140,21 +140,10 @@ headerBackImage:navigationParams.backButtonImage||backButtonImage});
 var NavBarFromParams=navigationParams.renderNavigationBar||navigationParams.navBar;
 if(NavBarFromParams!=null){
 if(NavBarFromParams){
-<<<<<<< HEAD
-res.header=function(data){return _react2.default.createElement(NavBarFromParams,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:142}}));};
+res.header=function(data){return _react2.default.createElement(NavBarFromParams,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:143}}));};
 }
 }else if(NavBar){
-res.header=function(data){return _react2.default.createElement(NavBar,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:145}}));};
-=======
-res.header=function(data){return(
-_react2.default.createElement(NavBarFromParams,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:237}})));};
-
-}
-}else if(NavBar){
-res.header=function(data){return(
-_react2.default.createElement(NavBar,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:242}})));};
-
->>>>>>> ec6160a... Added web stack management
+res.header=function(data){return _react2.default.createElement(NavBar,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:146}}));};
 }
 
 if(typeof navigationParams.panHandlers!=='undefined'){
@@ -166,16 +155,7 @@ res.gesturesEnabled=false;
 }
 
 if(navigationBarTitleImage){
-<<<<<<< HEAD
-res.headerTitle=_react2.default.createElement(_reactNative.Image,{source:navigationBarTitleImage,style:navigationBarTitleImageStyle,__source:{fileName:_jsxFileName,lineNumber:157}});
-=======
-res.headerTitle=
-_react2.default.createElement(_reactNative.Image,{
-source:navigationBarTitleImage,
-style:navigationBarTitleImageStyle,__source:{fileName:_jsxFileName,lineNumber:256}});
-
-
->>>>>>> ec6160a... Added web stack management
+res.headerTitle=_react2.default.createElement(_reactNative.Image,{source:navigationBarTitleImage,style:navigationBarTitleImageStyle,__source:{fileName:_jsxFileName,lineNumber:158}});
 }
 
 if(tabBarLabel){
@@ -184,11 +164,7 @@ res.tabBarLabel=tabBarLabel;
 
 if(tabBarIcon||icon){
 var Icon=tabBarIcon||icon;
-<<<<<<< HEAD
-res.tabBarIcon=function(data){return _react2.default.createElement(Icon,_extends({},state,data,{__source:{fileName:_jsxFileName,lineNumber:166}}));};
-=======
-res.tabBarIcon=function(data){return _react2.default.createElement(Icon,_extends({},state,data,{__source:{fileName:_jsxFileName,lineNumber:269}}));};
->>>>>>> ec6160a... Added web stack management
+res.tabBarIcon=function(data){return _react2.default.createElement(Icon,_extends({},state,data,{__source:{fileName:_jsxFileName,lineNumber:167}}));};
 }
 var componentData={};
 
@@ -202,104 +178,24 @@ componentData[key]=component[key];
 }
 }
 
-<<<<<<< HEAD
 if(rightButtonImage||rightTitle||params.renderRightButton||onRight||navigationParams.onRight||
 navigationParams.rightTitle||navigationParams.rightButtonImage||rightButtonTextStyle||
 (drawerImage||drawerIcon)&&!hideDrawerButton&&drawerPosition==='right'){
 res.headerRight=getValue(navigationParams.right||navigationParams.rightButton||params.renderRightButton,_extends({},
-navigationParams,screenProps))||_react2.default.createElement(RightNavBarButton,_extends({},params,navigationParams,componentData,{__source:{fileName:_jsxFileName,lineNumber:184}}));
+navigationParams,screenProps))||_react2.default.createElement(RightNavBarButton,_extends({},params,navigationParams,componentData,{__source:{fileName:_jsxFileName,lineNumber:185}}));
 }
-=======
-if(
-rightButtonImage||
-rightTitle||
-params.renderRightButton||
-onRight||
-navigationParams.onRight||
-navigationParams.rightTitle||
-navigationParams.rightButtonImage||
-rightButtonTextStyle||
-(drawerImage||drawerIcon)&&
-!hideDrawerButton&&
-drawerPosition==='right')
-{
-res.headerRight=getValue(
-navigationParams.right||
-navigationParams.rightButton||
-params.renderRightButton,_extends({},
-navigationParams,screenProps))||
-
-_react2.default.createElement(RightNavBarButton,_extends({},
-params,
-navigationParams,
-componentData,{__source:{fileName:_jsxFileName,lineNumber:315}}));
-
-
-}
-
-if(
-leftButtonImage||
-backButtonImage||
-backTitle||
-leftTitle||
-params.renderLeftButton||
-leftButtonTextStyle||
-renderBackButton||
-backButtonTextStyle||
-onLeft||
-navigationParams.leftTitle||
-navigationParams.onLeft||
-navigationParams.leftButtonImage||
-navigationParams.backButtonImage||
-navigationParams.backTitle||
-(drawerImage||drawerIcon)&&
-!hideDrawerButton&&
-drawerPosition!=='right')
-{
-res.headerLeft=
-getValue(
-navigationParams.left||
-navigationParams.leftButton||
-params.renderLeftButton,_extends({},
-params,navigationParams,screenProps))||
-
-(onLeft&&(
-leftTitle||
-navigationParams.leftTitle||
-leftButtonImage||
-navigationParams.leftButtonImage)||
-drawerImage||
-drawerIcon)&&
-_react2.default.createElement(LeftNavBarButton,_extends({},
-params,
-navigationParams,
-componentData,{__source:{fileName:_jsxFileName,lineNumber:356}}))||
-
-
-res.headerLeft||(
-init?
-null:
-renderBackButton&&renderBackButton(state)||
-_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:366}})));
->>>>>>> ec6160a... Added web stack management
 
 if(leftButtonImage||backButtonImage||backTitle||leftTitle||params.renderLeftButton||leftButtonTextStyle||renderBackButton||
 backButtonTextStyle||onLeft||navigationParams.leftTitle||navigationParams.onLeft||navigationParams.leftButtonImage||
 navigationParams.backButtonImage||navigationParams.backTitle||(drawerImage||drawerIcon)&&!hideDrawerButton&&drawerPosition!=='right'){
 res.headerLeft=getValue(navigationParams.left||navigationParams.leftButton||params.renderLeftButton,_extends({},params,navigationParams,screenProps))||
 (onLeft&&(leftTitle||navigationParams.leftTitle||leftButtonImage||navigationParams.leftButtonImage)||drawerImage||drawerIcon)&&
-_react2.default.createElement(LeftNavBarButton,_extends({},params,navigationParams,componentData,{__source:{fileName:_jsxFileName,lineNumber:192}}))||res.headerLeft||(
-init?null:renderBackButton&&renderBackButton(state)||_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:193}})));
+_react2.default.createElement(LeftNavBarButton,_extends({},params,navigationParams,componentData,{__source:{fileName:_jsxFileName,lineNumber:193}}))||res.headerLeft||(
+init?null:renderBackButton&&renderBackButton(state)||_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:194}})));
 }
 
 if(back){
-<<<<<<< HEAD
-res.headerLeft=renderBackButton&&renderBackButton(state)||_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:197}}));
-=======
-res.headerLeft=renderBackButton&&renderBackButton(state)||
-_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:372}}));
-
->>>>>>> ec6160a... Added web stack management
+res.headerLeft=renderBackButton&&renderBackButton(state)||_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:198}}));
 }
 
 if(typeof navigationParams.left!=='undefined'||typeof navigationParams.leftButton!=='undefined'||
@@ -419,22 +315,9 @@ this.ref=ref;
 {
 var navigation=this.props.navigation;
 if(!navigation||!navigation.state){
-<<<<<<< HEAD
-return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,{__source:{fileName:_jsxFileName,lineNumber:317}}));
+return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,{__source:{fileName:_jsxFileName,lineNumber:318}}));
 }
-return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,extendProps(navigation.state.params,store),{name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:319}}));
-=======
-return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,{__source:{fileName:_jsxFileName,lineNumber:523}}));
-}
-return(
-_react2.default.createElement(Component,_extends({
-ref:this.onRef},
-this.props,
-extendProps(navigation.state.params,store),{
-name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:526}})));
-
-
->>>>>>> ec6160a... Added web stack management
+return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,extendProps(navigation.state.params,store),{name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:320}}));
 }}]);return Wrapped;}(_react2.default.Component),_class.propTypes={navigation:_propTypes2.default.object},_temp);
 
 return wrapper(Wrapped);
@@ -442,18 +325,7 @@ return wrapper(Wrapped);
 
 
 function StatelessWrapped(_ref6){var navigation=_ref6.navigation,props=_objectWithoutProperties(_ref6,['navigation']);
-<<<<<<< HEAD
-return _react2.default.createElement(Component,_extends({},props,{navigation:navigation},extendProps(navigation.state.params,store),{name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:327}}));
-=======
-return(
-_react2.default.createElement(Component,_extends({},
-props,{
-navigation:navigation},
-extendProps(navigation.state.params,store),{
-name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:541}})));
-
-
->>>>>>> ec6160a... Added web stack management
+return _react2.default.createElement(Component,_extends({},props,{navigation:navigation},extendProps(navigation.state.params,store),{name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:328}}));
 }
 StatelessWrapped.propTypes={
 navigation:_propTypes2.default.object};
@@ -625,29 +497,11 @@ res[key]=screen;
 
 props.init=true;
 if(!_this2[key]){
-<<<<<<< HEAD
 _this2[key]=new Function('actions','props','type','return function '+
 key.replace(/\W/g,'_')+'(params){ actions.execute(type, \''+key+'\', props, params)}')(_this2,_extends({},commonProps,props),type);
 }
 
 if((onEnter||on||component&&component.onEnter)&&!_this2[key+_Util.OnEnter]){
-=======
-_this2[key]=new Function(
-'actions',
-'props',
-'type','return function '+
-key.replace(
-/\W/g,
-'_')+'(params){ actions.execute(type, \''+
-key+'\', props, params)}')(
-_this2,_extends({},commonProps,props),type);
-}
-
-if(
-(onEnter||on||component&&component.onEnter)&&
-!_this2[key+_Util.OnEnter])
-{
->>>>>>> ec6160a... Added web stack management
 _this2[key+_Util.OnEnter]=onEnter||on||component.onEnter;
 }
 
@@ -669,15 +523,8 @@ if(lightbox){
 return(0,_LightboxNavigator2.default)(res,_extends({mode:mode,initialRouteParams:initialRouteParams,initialRouteName:initialRouteName},commonProps,{navigationOptions:createNavigationOptions(commonProps)}));
 }else if(tabs){
 if(!tabBarComponent){
-<<<<<<< HEAD
-tabBarComponent=tabBarPosition==='top'?function(props){return _react2.default.createElement(_reactNavigation.TabBarTop,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:525}}));}:
-function(props){return _react2.default.createElement(_reactNavigation.TabBarBottom,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:526}}));};
-=======
-tabBarComponent=
-tabBarPosition==='top'?
-function(props){return _react2.default.createElement(_reactNavigation.TabBarTop,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:857}}));}:
-function(props){return _react2.default.createElement(_reactNavigation.TabBarBottom,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:858}}));};
->>>>>>> ec6160a... Added web stack management
+tabBarComponent=tabBarPosition==='top'?function(props){return _react2.default.createElement(_reactNavigation.TabBarTop,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:526}}));}:
+function(props){return _react2.default.createElement(_reactNavigation.TabBarBottom,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:527}}));};
 }
 if(!tabBarPosition){
 tabBarPosition=_reactNative.Platform.OS==='android'?'top':'bottom';
@@ -836,16 +683,6 @@ _this2.dispatch(_reactNavigation.NavigationActions.reset({key:null,index:0,actio
 routeName:routeName,
 params:params})]}));
 
-<<<<<<< HEAD
-};}_createClass(NavigationStore,[{key:'state',get:function get(){var scene=this.currentScene;var params=this.currentParams;return this._state;}}]);return NavigationStore;}(),(_descriptor=_applyDecoratedDescriptor(_class2.prototype,'currentScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor2=_applyDecoratedDescriptor(_class2.prototype,'prevScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor3=_applyDecoratedDescriptor(_class2.prototype,'currentParams',[_mobx.observable],{enumerable:true,initializer:null}),_descriptor4=_applyDecoratedDescriptor(_class2.prototype,'setState',[_mobx.action],{enumerable:true,initializer:function initializer(){var _this3=this;return function _callee(newState){var state,currentScene,exitHandler,res,handler,_success,_failure,params,_res;return regeneratorRuntime.async(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(newState){_context.next=2;break;}return _context.abrupt('return');case 2:state=(0,_State.getActiveState)(newState);if(!((0,_lodash2.default)(state.params,_this3._currentParams)&&state.routeName===_this3.currentScene)){_context.next=5;break;}return _context.abrupt('return');case 5:currentScene=_this3.currentScene;_this3._state=newState;_this3.currentScene=state.routeName;_this3.prevScene=currentScene;_this3.currentParams=state.params;_this3._currentParams=state.params;if(!(currentScene!==_this3.currentScene&&_this3.currentScene!=='DrawerOpen'&&_this3.currentScene!=='DrawerClose')){_context.next=32;break;}_this3.dispatch({type:ActionConst.BLUR,routeName:currentScene});exitHandler=_this3[currentScene+_Util.OnExit];if(exitHandler){try{res=exitHandler();if(res instanceof Promise){res.then(defaultSuccess,defaultFailure);}}catch(e){console.error('Error during onExit handler:',e);}}_this3.dispatch({type:ActionConst.FOCUS,routeName:_this3.currentScene,params:_this3._currentParams});if(!_this3.states[_this3.currentScene]){_context.next=32;break;}handler=_this3[_this3.currentScene+_Util.OnEnter];_success=_this3.states[_this3.currentScene].success||defaultSuccess;_failure=_this3.states[_this3.currentScene].failure||defaultFailure;if(!handler){_context.next=32;break;}_context.prev=21;params=(0,_State.getActiveState)(_this3._state).params;_context.next=25;return regeneratorRuntime.awrap(handler(params));case 25:_res=_context.sent;if(_res){_success(_res);}else{_failure();}_context.next=32;break;case 29:_context.prev=29;_context.t0=_context['catch'](21);_failure({error:_context.t0.message});case 32:case'end':return _context.stop();}}},null,_this3,[[21,29]]);};}})),_class2);exports.default=
-
-
-
-new NavigationStore();
-=======
-
-
-
 };}_createClass(NavigationStore,[{key:'state',get:function get(){var scene=this.currentScene;var params=this.currentParams;return this._state;}}]);return NavigationStore;}(),(_descriptor=_applyDecoratedDescriptor(_class2.prototype,'currentScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor2=_applyDecoratedDescriptor(_class2.prototype,'prevScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor3=_applyDecoratedDescriptor(_class2.prototype,'currentParams',[_mobx.observable],{enumerable:true,initializer:null}),_descriptor4=_applyDecoratedDescriptor(_class2.prototype,'setState',[_mobx.action],{enumerable:true,initializer:function initializer(){var _this3=this;return function _callee(newState){var state,currentScene,exitHandler,res,handler,_success,_failure,params,_res;return regeneratorRuntime.async(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(newState){_context.next=2;break;}return _context.abrupt('return');case 2:state=(0,_State.getActiveState)(newState);if(!((0,_lodash2.default)(state.params,_this3._currentParams)&&state.routeName===_this3.currentScene)){_context.next=5;break;}return _context.abrupt('return');case 5:currentScene=_this3.currentScene;_this3._state=newState;_this3.currentScene=state.routeName;_this3.prevScene=currentScene;_this3.currentParams=state.params;_this3._currentParams=state.params;if(!(currentScene!==_this3.currentScene&&_this3.currentScene!=='DrawerOpen'&&_this3.currentScene!=='DrawerClose')){_context.next=32;break;}_this3.dispatch({type:ActionConst.BLUR,routeName:currentScene});exitHandler=_this3[currentScene+_Util.OnExit];if(exitHandler){try{res=exitHandler();if(res instanceof Promise){res.then(defaultSuccess,defaultFailure);}}catch(e){console.error('Error during onExit handler:',e);}}_this3.dispatch({type:ActionConst.FOCUS,routeName:_this3.currentScene,params:_this3._currentParams});if(!_this3.states[_this3.currentScene]){_context.next=32;break;}handler=_this3[_this3.currentScene+_Util.OnEnter];_success=_this3.states[_this3.currentScene].success||defaultSuccess;_failure=_this3.states[_this3.currentScene].failure||defaultFailure;if(!handler){_context.next=32;break;}_context.prev=21;params=(0,_State.getActiveState)(_this3._state).params;_context.next=25;return regeneratorRuntime.awrap(handler(params));case 25:_res=_context.sent;if(_res){_success(_res);}else{_failure();}_context.next=32;break;case 29:_context.prev=29;_context.t0=_context['catch'](21);_failure({error:_context.t0.message});case 32:case'end':return _context.stop();}}},null,_this3,[[21,29]]);};}})),_class2);
 
 
@@ -855,4 +692,3 @@ store.pop();
 });exports.default=
 
 store;
->>>>>>> ec6160a... Added web stack management
