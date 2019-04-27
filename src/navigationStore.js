@@ -25,6 +25,7 @@ import Drawer from './Drawer';
 import Tabs from './Tabs';
 import Overlay from './Overlay';
 import OverlayNavigator from './OverlayNavigator';
+import {push, addOnPopHandler} from './WebStack';
 
 let RightNavBarButton;
 let LeftNavBarButton;
@@ -1005,6 +1006,7 @@ class NavigationStore {
   push = (routeName, data) => {
     const params = filterParam(data);
     this.dispatch({ type: ActionConst.PUSH, routeName, params });
+    push()
   };
 
   jump = (routeName, data) => {
@@ -1072,4 +1074,9 @@ class NavigationStore {
   };
 }
 
-export default new NavigationStore();
+const store = new NavigationStore();
+addOnPopHandler(() => {
+  store.pop();
+})
+
+export default store;

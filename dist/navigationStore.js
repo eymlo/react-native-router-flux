@@ -24,7 +24,8 @@ var _Lightbox=require('./Lightbox');var _Lightbox2=_interopRequireDefault(_Light
 var _Drawer=require('./Drawer');var _Drawer2=_interopRequireDefault(_Drawer);
 var _Tabs=require('./Tabs');var _Tabs2=_interopRequireDefault(_Tabs);
 var _Overlay=require('./Overlay');var _Overlay2=_interopRequireDefault(_Overlay);
-var _OverlayNavigator=require('./OverlayNavigator');var _OverlayNavigator2=_interopRequireDefault(_OverlayNavigator);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}function _initDefineProp(target,property,descriptor,context){if(!descriptor)return;Object.defineProperty(target,property,{enumerable:descriptor.enumerable,configurable:descriptor.configurable,writable:descriptor.writable,value:descriptor.initializer?descriptor.initializer.call(context):void 0});}function _applyDecoratedDescriptor(target,property,decorators,descriptor,context){var desc={};Object['ke'+'ys'](descriptor).forEach(function(key){desc[key]=descriptor[key];});desc.enumerable=!!desc.enumerable;desc.configurable=!!desc.configurable;if('value'in desc||desc.initializer){desc.writable=true;}desc=decorators.slice().reverse().reduce(function(desc,decorator){return decorator(target,property,desc)||desc;},desc);if(context&&desc.initializer!==void 0){desc.value=desc.initializer?desc.initializer.call(context):void 0;desc.initializer=undefined;}if(desc.initializer===void 0){Object['define'+'Property'](target,property,desc);desc=null;}return desc;}function _initializerWarningHelper(descriptor,context){throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}function _objectWithoutProperties(obj,keys){var target={};for(var i in obj){if(keys.indexOf(i)>=0)continue;if(!Object.prototype.hasOwnProperty.call(obj,i))continue;target[i]=obj[i];}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}
+var _OverlayNavigator=require('./OverlayNavigator');var _OverlayNavigator2=_interopRequireDefault(_OverlayNavigator);
+var _WebStack=require('./WebStack');function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}function _initDefineProp(target,property,descriptor,context){if(!descriptor)return;Object.defineProperty(target,property,{enumerable:descriptor.enumerable,configurable:descriptor.configurable,writable:descriptor.writable,value:descriptor.initializer?descriptor.initializer.call(context):void 0});}function _applyDecoratedDescriptor(target,property,decorators,descriptor,context){var desc={};Object['ke'+'ys'](descriptor).forEach(function(key){desc[key]=descriptor[key];});desc.enumerable=!!desc.enumerable;desc.configurable=!!desc.configurable;if('value'in desc||desc.initializer){desc.writable=true;}desc=decorators.slice().reverse().reduce(function(desc,decorator){return decorator(target,property,desc)||desc;},desc);if(context&&desc.initializer!==void 0){desc.value=desc.initializer?desc.initializer.call(context):void 0;desc.initializer=undefined;}if(desc.initializer===void 0){Object['define'+'Property'](target,property,desc);desc=null;}return desc;}function _initializerWarningHelper(descriptor,context){throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}function _objectWithoutProperties(obj,keys){var target={};for(var i in obj){if(keys.indexOf(i)>=0)continue;if(!Object.prototype.hasOwnProperty.call(obj,i))continue;target[i]=obj[i];}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}
 
 var RightNavBarButton=void 0;
 var LeftNavBarButton=void 0;
@@ -233,12 +234,12 @@ navigationParams.renderNavigationBar||navigationParams.navBar;
 if(NavBarFromParams!=null){
 if(NavBarFromParams){
 res.header=function(data){return(
-_react2.default.createElement(NavBarFromParams,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:236}})));};
+_react2.default.createElement(NavBarFromParams,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:237}})));};
 
 }
 }else if(NavBar){
 res.header=function(data){return(
-_react2.default.createElement(NavBar,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:241}})));};
+_react2.default.createElement(NavBar,_extends({navigation:navigation},state,data,{__source:{fileName:_jsxFileName,lineNumber:242}})));};
 
 }
 
@@ -254,7 +255,7 @@ if(navigationBarTitleImage){
 res.headerTitle=
 _react2.default.createElement(_reactNative.Image,{
 source:navigationBarTitleImage,
-style:navigationBarTitleImageStyle,__source:{fileName:_jsxFileName,lineNumber:255}});
+style:navigationBarTitleImageStyle,__source:{fileName:_jsxFileName,lineNumber:256}});
 
 
 }
@@ -265,7 +266,7 @@ res.tabBarLabel=tabBarLabel;
 
 if(tabBarIcon||icon){
 var Icon=tabBarIcon||icon;
-res.tabBarIcon=function(data){return _react2.default.createElement(Icon,_extends({},state,data,{__source:{fileName:_jsxFileName,lineNumber:268}}));};
+res.tabBarIcon=function(data){return _react2.default.createElement(Icon,_extends({},state,data,{__source:{fileName:_jsxFileName,lineNumber:269}}));};
 }
 var componentData={};
 
@@ -314,7 +315,7 @@ navigationParams,screenProps))||
 _react2.default.createElement(RightNavBarButton,_extends({},
 params,
 navigationParams,
-componentData,{__source:{fileName:_jsxFileName,lineNumber:314}}));
+componentData,{__source:{fileName:_jsxFileName,lineNumber:315}}));
 
 
 }
@@ -355,20 +356,20 @@ drawerIcon)&&
 _react2.default.createElement(LeftNavBarButton,_extends({},
 params,
 navigationParams,
-componentData,{__source:{fileName:_jsxFileName,lineNumber:355}}))||
+componentData,{__source:{fileName:_jsxFileName,lineNumber:356}}))||
 
 
 res.headerLeft||(
 init?
 null:
 renderBackButton&&renderBackButton(state)||
-_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:365}})));
+_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:366}})));
 
 }
 
 if(back){
 res.headerLeft=renderBackButton&&renderBackButton(state)||
-_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:371}}));
+_react2.default.createElement(BackNavBarButton,_extends({},state,{__source:{fileName:_jsxFileName,lineNumber:372}}));
 
 }
 
@@ -519,14 +520,14 @@ this.ref=ref;
 {
 var navigation=this.props.navigation;
 if(!navigation||!navigation.state){
-return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,{__source:{fileName:_jsxFileName,lineNumber:522}}));
+return _react2.default.createElement(Component,_extends({ref:this.onRef},this.props,{__source:{fileName:_jsxFileName,lineNumber:523}}));
 }
 return(
 _react2.default.createElement(Component,_extends({
 ref:this.onRef},
 this.props,
 extendProps(navigation.state.params,store),{
-name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:525}})));
+name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:526}})));
 
 
 }}]);return Wrapped;}(_react2.default.Component),_class.propTypes={navigation:_propTypes2.default.object},_temp);
@@ -541,7 +542,7 @@ _react2.default.createElement(Component,_extends({},
 props,{
 navigation:navigation},
 extendProps(navigation.state.params,store),{
-name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:540}})));
+name:navigation.state.routeName,__source:{fileName:_jsxFileName,lineNumber:541}})));
 
 
 }
@@ -808,8 +809,8 @@ _this2[key]=new Function(
 key.replace(
 /\W/g,
 '_')+'(params){ actions.execute(type, \''+
-key+'\', props, params)}')(_this2,_extends({},
-commonProps,props),type);
+key+'\', props, params)}')(
+_this2,_extends({},commonProps,props),type);
 }
 
 if(
@@ -853,8 +854,8 @@ navigationOptions:createNavigationOptions(commonProps)}));
 if(!tabBarComponent){
 tabBarComponent=
 tabBarPosition==='top'?
-function(props){return _react2.default.createElement(_reactNavigation.TabBarTop,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:856}}));}:
-function(props){return _react2.default.createElement(_reactNavigation.TabBarBottom,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:857}}));};
+function(props){return _react2.default.createElement(_reactNavigation.TabBarTop,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:857}}));}:
+function(props){return _react2.default.createElement(_reactNavigation.TabBarBottom,_extends({},props,commonProps,{__source:{fileName:_jsxFileName,lineNumber:858}}));};
 }
 if(!tabBarPosition){
 tabBarPosition=_reactNative.Platform.OS==='android'?'top':'bottom';
@@ -1005,6 +1006,7 @@ _this2[type](routeName,res);
 push=function(routeName,data){
 var params=filterParam(data);
 _this2.dispatch({type:ActionConst.PUSH,routeName:routeName,params:params});
+(0,_WebStack.push)();
 };this.
 
 jump=function(routeName,data){
@@ -1069,7 +1071,12 @@ params:params})]}));
 
 
 
-};}_createClass(NavigationStore,[{key:'state',get:function get(){var scene=this.currentScene;var params=this.currentParams;return this._state;}}]);return NavigationStore;}(),(_descriptor=_applyDecoratedDescriptor(_class2.prototype,'currentScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor2=_applyDecoratedDescriptor(_class2.prototype,'prevScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor3=_applyDecoratedDescriptor(_class2.prototype,'currentParams',[_mobx.observable],{enumerable:true,initializer:null}),_descriptor4=_applyDecoratedDescriptor(_class2.prototype,'setState',[_mobx.action],{enumerable:true,initializer:function initializer(){var _this3=this;return function _callee(newState){var state,currentScene,exitHandler,res,handler,_success,_failure,params,_res;return regeneratorRuntime.async(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(newState){_context.next=2;break;}return _context.abrupt('return');case 2:state=(0,_State.getActiveState)(newState);if(!((0,_lodash2.default)(state.params,_this3._currentParams)&&state.routeName===_this3.currentScene)){_context.next=5;break;}return _context.abrupt('return');case 5:currentScene=_this3.currentScene;_this3._state=newState;_this3.currentScene=state.routeName;_this3.prevScene=currentScene;_this3.currentParams=state.params;_this3._currentParams=state.params;if(!(currentScene!==_this3.currentScene&&_this3.currentScene!=='DrawerOpen'&&_this3.currentScene!=='DrawerClose')){_context.next=32;break;}_this3.dispatch({type:ActionConst.BLUR,routeName:currentScene});exitHandler=_this3[currentScene+_Util.OnExit];if(exitHandler){try{res=exitHandler();if(res instanceof Promise){res.then(defaultSuccess,defaultFailure);}}catch(e){console.error('Error during onExit handler:',e);}}_this3.dispatch({type:ActionConst.FOCUS,routeName:_this3.currentScene,params:_this3._currentParams});if(!_this3.states[_this3.currentScene]){_context.next=32;break;}handler=_this3[_this3.currentScene+_Util.OnEnter];_success=_this3.states[_this3.currentScene].success||defaultSuccess;_failure=_this3.states[_this3.currentScene].failure||defaultFailure;if(!handler){_context.next=32;break;}_context.prev=21;params=(0,_State.getActiveState)(_this3._state).params;_context.next=25;return regeneratorRuntime.awrap(handler(params));case 25:_res=_context.sent;if(_res){_success(_res);}else{_failure();}_context.next=32;break;case 29:_context.prev=29;_context.t0=_context['catch'](21);_failure({error:_context.t0.message});case 32:case'end':return _context.stop();}}},null,_this3,[[21,29]]);};}})),_class2);exports.default=
+};}_createClass(NavigationStore,[{key:'state',get:function get(){var scene=this.currentScene;var params=this.currentParams;return this._state;}}]);return NavigationStore;}(),(_descriptor=_applyDecoratedDescriptor(_class2.prototype,'currentScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor2=_applyDecoratedDescriptor(_class2.prototype,'prevScene',[_mobx.observable],{enumerable:true,initializer:function initializer(){return'';}}),_descriptor3=_applyDecoratedDescriptor(_class2.prototype,'currentParams',[_mobx.observable],{enumerable:true,initializer:null}),_descriptor4=_applyDecoratedDescriptor(_class2.prototype,'setState',[_mobx.action],{enumerable:true,initializer:function initializer(){var _this3=this;return function _callee(newState){var state,currentScene,exitHandler,res,handler,_success,_failure,params,_res;return regeneratorRuntime.async(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(newState){_context.next=2;break;}return _context.abrupt('return');case 2:state=(0,_State.getActiveState)(newState);if(!((0,_lodash2.default)(state.params,_this3._currentParams)&&state.routeName===_this3.currentScene)){_context.next=5;break;}return _context.abrupt('return');case 5:currentScene=_this3.currentScene;_this3._state=newState;_this3.currentScene=state.routeName;_this3.prevScene=currentScene;_this3.currentParams=state.params;_this3._currentParams=state.params;if(!(currentScene!==_this3.currentScene&&_this3.currentScene!=='DrawerOpen'&&_this3.currentScene!=='DrawerClose')){_context.next=32;break;}_this3.dispatch({type:ActionConst.BLUR,routeName:currentScene});exitHandler=_this3[currentScene+_Util.OnExit];if(exitHandler){try{res=exitHandler();if(res instanceof Promise){res.then(defaultSuccess,defaultFailure);}}catch(e){console.error('Error during onExit handler:',e);}}_this3.dispatch({type:ActionConst.FOCUS,routeName:_this3.currentScene,params:_this3._currentParams});if(!_this3.states[_this3.currentScene]){_context.next=32;break;}handler=_this3[_this3.currentScene+_Util.OnEnter];_success=_this3.states[_this3.currentScene].success||defaultSuccess;_failure=_this3.states[_this3.currentScene].failure||defaultFailure;if(!handler){_context.next=32;break;}_context.prev=21;params=(0,_State.getActiveState)(_this3._state).params;_context.next=25;return regeneratorRuntime.awrap(handler(params));case 25:_res=_context.sent;if(_res){_success(_res);}else{_failure();}_context.next=32;break;case 29:_context.prev=29;_context.t0=_context['catch'](21);_failure({error:_context.t0.message});case 32:case'end':return _context.stop();}}},null,_this3,[[21,29]]);};}})),_class2);
 
 
-new NavigationStore();
+var store=new NavigationStore();
+(0,_WebStack.addOnPopHandler)(function(){
+store.pop();
+});exports.default=
+
+store;
