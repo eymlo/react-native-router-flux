@@ -67,13 +67,22 @@ const compilePathToRegex = (path) => {
 export const matchPath = (path, url) => {
   // Remove possible query fragments, which are not supported by iOS and some
   // versions of Anroid.
-  const [urlCleaned] = url.split('?');
+  let urlCleaned = '';
+  let pathToMatch = path;
+
+  // Look for web routes
+  if (path.match(/\?path=/)) {
+    urlCleaned = url.split('path=')[1] || '';
+    pathToMatch = path.split('path=')[1]
+  } else {
+    urlCleaned = url.split('?')[0];
+  }
 
   // Append trailing slash for compatibility with pathToRegexp
   const urlToMatch = !urlCleaned.endsWith('/') ? `${urlCleaned}/` : urlCleaned;
 
   // Return the regex and the keys that can be parsed from a uri path.
-  const { re, keys } = compilePathToRegex(path);
+  const { re, keys } = compilePathToRegex(pathToMatch);
 
   // Check if the given url matches the uri path.
   const match = re.exec(urlToMatch);
